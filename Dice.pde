@@ -1,4 +1,4 @@
-int roll;  //global variable, so roll can be used throughout the program
+int value;  //global variable, so roll can be used throughout the program
 
 void setup()
   {
@@ -24,28 +24,28 @@ void setup()
        Die dice = new Die(x,y); //one instance of class
       dice.roll(); //calls upon a new "roll" of the roll variable to generate a new dot number
       dice.show(); //calls upon the show function that holds all the die shape and dots
-      totalDots += roll; //adds the value of roll that is called to the totalDots variable to store the sum of all the dots on the canvas per click
-     if(roll == 1) //if roll is equal to 1 then oneDot is increased by one, this counts how many ones show up on the canvas, and the else if statements counts the twos, threes, fours, etc. 
+      totalDots += value; //adds the value of roll that is called to the totalDots variable to store the sum of all the dots on the canvas per click
+     if(value == 1) //if roll is equal to 1 then oneDot is increased by one, this counts how many ones show up on the canvas, and the else if statements counts the twos, threes, fours, etc. 
      {
        oneDot ++;
      }
-     else if(roll == 2)
+     else if(value == 2)
      {
        twoDots ++;
      }
-     else if(roll == 3)
+     else if(value == 3)
      {
        threeDots ++;
      }
-     else if(roll == 4)
+     else if(value == 4)
      {
        fourDots ++;
      }
-     else if(roll == 5)
+     else if(value == 5)
      {
        fiveDots ++;
      }
-     else if(roll == 6)
+     else if(value == 6)
      {
        sixDots ++;
      }
@@ -91,7 +91,7 @@ void setup()
       }
       void roll()
       {
-       roll = (int)((Math.random()*6)+1); //generates a random value from 1 - 6, like a die roll
+       value = (int)((Math.random()*6)+1); //generates a random value from 1 - 6, like a die roll
         
         
          
@@ -105,29 +105,29 @@ void setup()
           rect(xVal,yVal,50,50,5); //die rectangle
           fill(255);
           
-          if(roll==1) //if roll equals 1 then draw one dot on the dice, else if roll equals 2 draw two dots, etc. 
+          if(value==1) //if roll equals 1 then draw one dot on the dice, else if roll equals 2 draw two dots, etc. 
           {
             ellipse(xVal+25,yVal+25,10,10); // ONE
           }
-          else if(roll ==2)
+          else if(value ==2)
           {
             ellipse(xVal+15,yVal+15,10,10);  // TWO
          ellipse(xVal+35,yVal+35,10,10);
           }
-          else if(roll ==3)
+          else if(value ==3)
           {
             ellipse(xVal+10,yVal+10,10,10);  // THREE
           ellipse(xVal+25,yVal+25,10,10);
           ellipse(xVal+40, yVal +40,10,10);
           }
-          else if(roll ==4)
+          else if(value ==4)
           {
             ellipse(xVal+10,yVal+10,10,10);  //FOUR
           ellipse(xVal+10, yVal+40,10,10);
           ellipse(xVal+40,yVal+10,10,10);
           ellipse(xVal+40,yVal+40,10,10);
           }
-          else if(roll ==5)
+          else if(value ==5)
           {
             ellipse(xVal+10,yVal+10,10,10);  //FIVE
           ellipse(xVal+10, yVal+40,10,10);
@@ -135,7 +135,7 @@ void setup()
           ellipse(xVal+40,yVal+10,10,10);
           ellipse(xVal+40,yVal+40,10,10);
           }
-          else if(roll ==6)
+          else if(value ==6)
           {
             ellipse(xVal+10,yVal+10,10,10);  //SIX
           ellipse(xVal+10, yVal+40,10,10);
