@@ -15,7 +15,7 @@ void setup()
       int threeDots = 0;
       int fourDots = 0;
       int fiveDots = 0;
-    int sixDots = 0;
+      int sixDots = 0;
       
       for(int x = 25; x < 500; x+=100) //loop controlling columns
       {
@@ -67,9 +67,7 @@ void setup()
     
     text("Click Here ", 500, 450); //Prompt the user
     
-    
-                                
-     
+  
       
   }
   void mousePressed()
@@ -94,7 +92,7 @@ void setup()
       void roll()
       {
        roll = (int)((Math.random()*6)+1); //generates a random value from 1 - 6, like a die roll
-        //System.out.println(roll);
+        
         
          
       }
@@ -148,10 +146,7 @@ void setup()
           }
           
           
-            
-       
-          
-       
+               
           
       
 }
