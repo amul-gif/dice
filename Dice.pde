@@ -22,8 +22,8 @@ void setup()
         for(int y = 25; y < 500; y+=100) //loop controlling rows
         { 
        Die dice = new Die(x,y); //one instance of class
-      dice.show(); //calls upon the show function that holds all the die shape and dots
       dice.roll(); //calls upon a new "roll" of the roll variable to generate a new dot number
+      dice.show(); //calls upon the show function that holds all the die shape and dots
       totalDots += roll; //adds the value of roll that is called to the totalDots variable to store the sum of all the dots on the canvas per click
      if(roll == 1) //if roll is equal to 1 then oneDot is increased by one, this counts how many ones show up on the canvas, and the else if statements counts the twos, threes, fours, etc. 
      {
